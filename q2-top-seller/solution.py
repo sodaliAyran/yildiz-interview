@@ -23,7 +23,7 @@ if __name__ == "__main__":
     sales = pd.read_csv("sales.csv", dtype={'product': 'int', 'store': 'int', 'quantity': 'int'}, parse_dates=['date'])
     store = pd.read_csv("store.csv", dtype={'id': 'int', 'name': 'str', 'city': 'str'})
 
-    mask = (sales['date'] > min_date) & (sales['date'] <= max_date)
+    mask = (sales['date'] >= min_date) & (sales['date'] <= max_date)
     sales = sales.loc[mask]
 
     product_sales = pd.merge(product, sales, left_on=['id'], right_on=['product'])
