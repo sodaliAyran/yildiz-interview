@@ -1,2 +1,2 @@
 # yildiz-interview
-Answers for a Python challange
+Answers for a Python challenge
